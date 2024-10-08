@@ -2,26 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body{
+  @apply flex flex-col min-h-screen
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.links li a{
+  @apply text-white text-xl
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* border-spacing-0 -> espaçamento entre uma borda e outra, sem ele */
+table, th, td{
+  @apply border border-spacing-0 border-indigo-950 text-center
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* p-1 -> 4px */
+th, td{
+  @apply p-1
 }
