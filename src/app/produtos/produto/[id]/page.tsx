@@ -21,13 +21,13 @@ export default function Produto({params}:{params:{id: number}}){
 
     return(
         <main className="grow">
-            <h2>Produto</h2>
-            <div>
+            <h2 className="text-3xl text-center text-indigo-600 mb-4">Produto</h2>
+            <div className="bg-indigo-300 w-48 p-2 m-auto border border-indigo-950 rounded-md">
                 {/* esse id é possivelmente indefinido, então não temos a garantia que ele existe. Sabendo disso, posso colocar o "?" -> isso esta vindo de um outro lugar, pode ser que ele venha, pode ser que nao venha */}
-                <p>Id: {produto?.id}</p>
-                <p>Nome: {produto?.nome}</p>
-                <p>Preço: {produto?.preco}</p>
-                <p>Estoque: {produto?.estoque}</p>
+                <p className="text-lg font-medium mb-1">Id: {produto?.id}</p>
+                <p className="text-lg font-medium mb-1">Nome: {produto?.nome}</p>
+                <p className="text-lg font-medium mb-1">Preço: {produto?.preco}</p>
+                <p className="text-lg font-medium mb-1">Estoque: {produto?.estoque}</p>
             </div>
         </main>
     )
